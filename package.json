@@ -9,13 +9,14 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "entry.js",
-    "impl.js",
-    "engine.js",
-    "desktop.ps1",
-    "cordis.patch.yml",
+    "LICENSE",
     "README.md",
-    "LICENSE"
+    "cordis.patch.yml",
+    "desktop.ps1",
+    "docs",
+    "engine.js",
+    "entry.js",
+    "impl.js"
   ],
   "keywords": [
     "dsh-plugin",
@@ -38,9 +39,6 @@
     "bundle": {
       "patch": "cordis.patch.yml"
     }
-  },
-  "peerDependencies": {
-    "@deepseek-ai/cordis": "*"
   },
   "repository": {
     "type": "git",
