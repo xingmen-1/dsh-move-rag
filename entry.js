@@ -6,7 +6,7 @@
  * evaluates them there. That keeps every source file editable and lets the
  * desktop widget read its own PowerShell script from a stable path.
  *
- * @module dsh-knowledge
+ * @module dsh-move-rag
  */
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, statSync } from 'node:fs'
 import { homedir } from 'node:os'
@@ -33,12 +33,12 @@ function packageDir() {
     // The loader may evaluate the module without import.meta; fall back to the
     // profile install locations pnpm materializes.
     const roots = [
-      join(homedir(), '.dsh', 'profiles', 'web', 'node_modules', 'dsh-knowledge'),
-      join(homedir(), '.dsh', 'profiles', 'node_modules', 'dsh-knowledge'),
-      join(homedir(), '.dsh', 'profiles', 'headless', 'node_modules', 'dsh-knowledge'),
+      join(homedir(), '.dsh', 'profiles', 'web', 'node_modules', 'dsh-move-rag'),
+      join(homedir(), '.dsh', 'profiles', 'node_modules', 'dsh-move-rag'),
+      join(homedir(), '.dsh', 'profiles', 'headless', 'node_modules', 'dsh-move-rag'),
     ]
     for (const root of roots) if (existsSync(root)) return root
-    throw new Error('dsh-knowledge: cannot locate the installed package directory')
+    throw new Error('dsh-move-rag: cannot locate the installed package directory')
   }
 }
 

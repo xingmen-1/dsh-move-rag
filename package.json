@@ -1,7 +1,7 @@
 {
-  "name": "dsh-knowledge",
+  "name": "dsh-move-rag",
   "version": "0.1.0",
-  "description": "Local knowledge base for DeepSeek Harness: RAG over your own documents with an always-on-top desktop panel you can drop files onto.",
+  "description": "Local knowledge base for DeepSeek Harness that lives on your desktop: drag files onto an always-on-top icon to ingest them, search them from the same panel, and let the agent query them.",
   "type": "module",
   "main": "entry.js",
   "exports": {
@@ -23,7 +23,9 @@
     "cordis-plugin",
     "rag",
     "knowledge-base",
-    "retrieval"
+    "retrieval",
+    "desktop",
+    "winforms"
   ],
   "license": "MIT",
   "engines": {
@@ -39,5 +41,13 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<YOUR GH USER>/dsh-move-rag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<YOUR GH USER>/dsh-move-rag/issues"
+  },
+  "homepage": "https://github.com/<YOUR GH USER>/dsh-move-rag#readme"
 }
