@@ -8,7 +8,7 @@
  *
  * @module dsh-move-rag
  */
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, statSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -32,11 +32,11 @@ function packageDir() {
   } catch {
     // The loader may evaluate the module without import.meta; fall back to the
     // profile install locations pnpm materializes.
-    const roots = [
-      join(homedir(), '.dsh', 'profiles', 'web', 'node_modules', 'dsh-move-rag'),
-      join(homedir(), '.dsh', 'profiles', 'node_modules', 'dsh-move-rag'),
-      join(homedir(), '.dsh', 'profiles', 'headless', 'node_modules', 'dsh-move-rag'),
-    ]
+    const profiles = join(homedir(), '.dsh', 'profiles')
+    const roots = [join(profiles, 'node_modules', 'dsh-move-rag')]
+    try {
+      for (const entry of readdirSync(profiles)) roots.push(join(profiles, entry, 'node_modules', 'dsh-move-rag'))
+    } catch { /* no profiles directory: the shared root above is all we have */ }
     for (const root of roots) if (existsSync(root)) return root
     throw new Error('dsh-move-rag: cannot locate the installed package directory')
   }
