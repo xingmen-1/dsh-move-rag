@@ -44,10 +44,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<YOUR GH USER>/dsh-move-rag.git"
+    "url": "git+https://github.com/xingmen-1/dsh-move-rag.git"
   },
   "bugs": {
-    "url": "https://github.com/<YOUR GH USER>/dsh-move-rag/issues"
+    "url": "https://github.com/xingmen-1/dsh-move-rag/issues"
   },
-  "homepage": "https://github.com/<YOUR GH USER>/dsh-move-rag#readme"
+  "homepage": "https://github.com/xingmen-1/dsh-move-rag#readme"
 }
