@@ -1,0 +1,4 @@
+# Added to the profile's layer stack while this package is installed.
+- insert:
+    - id: knowledge
+      name: dsh-knowledge

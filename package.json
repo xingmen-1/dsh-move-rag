@@ -1,0 +1,43 @@
+{
+  "name": "dsh-knowledge",
+  "version": "0.1.0",
+  "description": "Local knowledge base for DeepSeek Harness: RAG over your own documents with an always-on-top desktop panel you can drop files onto.",
+  "type": "module",
+  "main": "entry.js",
+  "exports": {
+    ".": "./entry.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "entry.js",
+    "impl.js",
+    "engine.js",
+    "desktop.ps1",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "rag",
+    "knowledge-base",
+    "retrieval"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "os": [
+    "win32"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  }
+}
