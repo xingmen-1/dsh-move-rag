@@ -1,5 +1,7 @@
 # dsh-move-rag
 
+[![dsh-plugin](https://img.shields.io/badge/DSH-plugin-3b82f6)](https://github.com/topics/dsh-plugin)
+
 给 **DeepSeek Harness** 用的本地知识库插件：把 PDF / Word / 图片 / 代码丢进一个文件夹，它负责提取、切片、向量化、检索；桌面上常驻一个置顶小图标，**拖文件上去就入库**，点开就是搜索面板。
 
 不依赖任何云端向量库、不下载模型权重——嵌入是在本地用哈希词向量算的，索引是一个 JSON 文件。
@@ -25,7 +27,7 @@
 ## 安装
 
 ```sh
-dsh plugin --profile web add github:<你的用户名>/dsh-move-rag
+dsh plugin --profile web add github:xingmen-1/dsh-move-rag
 ```
 
 `dsh plugin add` 会做两件事：`pnpm add` 这个包，然后**发现包声明的 `dsh.bundle.patch` 并自动把这一层加进 profile**，所以不需要你手动改 `cordis.patch.yml`。
